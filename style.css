@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f1020;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background: rgba(15, 16, 32, 0.95);
+  border-bottom: 1px solid #292a45;
+}
+
+header h1 {
+  font-size: 22px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #a78bfa;
+}
+
+
+/* SECCIONES */
+
+section {
+  padding: 80px 8%;
+}
+
+h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+
+/* INICIO */
+
+.hero {
+  min-height: 85vh;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at 70% 40%, #5731a8, transparent 30%),
+    radial-gradient(circle at 20% 70%, #173f72, transparent 30%);
+
+}
+
+.hero h2 {
+  max-width: 700px;
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 20px 0;
+  font-size: 19px;
+  color: #d0d0d0;
+}
+
+.etiqueta {
+  color: #a78bfa !important;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 14px !important;
+}
+
+
+/* BOTONES */
+
+.boton,
+button {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 13px 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.boton:hover,
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+
+/* PRODUCTOS */
+
+.productos {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.producto {
+  background: #191a2e;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  border: 1px solid #292a45;
+
+  transition: 0.3s;
+}
+
+.producto:hover {
+  transform: translateY(-7px);
+  border-color: #8b5cf6;
+}
+
+.imagen-producto {
+  height: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 80px;
+
+  background: #111225;
+
+  border-radius: 12px;
+
+  margin-bottom: 20px;
+}
+
+.producto h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.producto p {
+  color: #aaa;
+  min-height: 70px;
+}
+
+.producto strong {
+  display: block;
+
+  margin-top: 15px;
+
+  font-size: 22px;
+
+  color: #a78bfa;
+}
+
+
+/* PERSONALIZADOS */
+
+.personalizados {
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.2),
+      rgba(6, 182, 212, 0.1)
+    );
+}
+
+.personalizados p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color: #ccc;
+}
+
+
+/* COMO FUNCIONA */
+
+.como-funciona {
+  text-align: center;
+}
+
+.pasos {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  margin-top: 40px;
+}
+
+.pasos div {
+  background: #191a2e;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  border: 1px solid #292a45;
+}
+
+.pasos span {
+  display: inline-flex;
+
+  width: 45px;
+  height: 45px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #8b5cf6;
+
+  font-weight: bold;
+
+  margin-bottom: 15px;
+}
+
+.pasos p {
+  color: #aaa;
+}
+
+
+/* CONTACTO */
+
+.contacto {
+  text-align: center;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+
+/* PIE */
+
+footer {
+  padding: 35px 8%;
+
+  text-align: center;
+
+  background: #090a14;
+
+  color: #888;
+}
+
+
+/* CELULARES */
+
+@media (max-width: 900px) {
+
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pasos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h2 {
+    font-size: 45px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 60px 6%;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero h2 {
+    font-size: 38px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .pasos {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+}
